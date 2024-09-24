@@ -10,6 +10,7 @@
             // Random numbers
             Console.WriteLine("Please enter a minimum value, as a whole number: ");
             Int32.TryParse(Console.ReadLine(), out min);
+            Console.WriteLine();
             Console.WriteLine("Please enter a maximum value, as a whole number: ");
             Int32.TryParse(Console.ReadLine(), out max);
 
@@ -24,20 +25,17 @@
             secretNumber = generator.Next(1, 10);
             
             Console.WriteLine("Let's play a game!");
+            Console.WriteLine();
             Console.WriteLine("I chose a number between 1 and 10, can you guess it?");
             Console.Write("Your guess: ");
-            Console.WriteLine();
             Int32.TryParse(Console.ReadLine(), out guess);
+            Console.WriteLine();
             if (guess == secretNumber)
                 Console.WriteLine("You guessed my secret number!");
             else if (guess > secretNumber)
                 Console.WriteLine("Your guess is too high! My number was " + secretNumber);
             else if (guess < secretNumber)
                 Console.WriteLine("Your guess is too low! My number was " + secretNumber);
-            else if (guess > 10)
-                Console.WriteLine("I said from 1 to 10! That's way too high.");
-            else if (guess < 1)
-                Console.WriteLine("I said from 1 to 10! That's way too low.");
             Console.WriteLine();
 
             // Roll the dice
